@@ -1,0 +1,133 @@
+a:active, a:focus { outline: none; }
+input, textarea {outline:none;}
+input:active, textarea:active {outline:none;}
+:focus {outline:none;}
+button{cursor: pointer;}
+
+/*-------------------------------------*/
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#app{
+    padding: 80px 0 50px 0;
+}
+a:hover {
+    text-decoration: none;
+}
+a {
+    color: #333;
+    text-decoration: none;
+    transition: all .3s;
+}
+a:hover {
+    color: #f60;
+    text-decoration: none;
+}
+
+/*--------------Loader---------------*/
+.loader-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader {
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #414141;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/*-----------------------------------*/
+
+.navbar {
+    background: #f60;
+}
+.search{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.search-input{
+    outline: none;
+    border: none;
+    max-width: 180px;
+    font-size: 16px;
+    padding: 10px 10px;
+    border-radius: 20px 0 0 20px;
+}
+.search-btn{
+    padding: 10px 15px 10px 10px;
+    border: none;
+    background: #ffc400;
+    border-radius: 0 20px 20px 0;
+    color: #fff;
+    transition: all .2s;
+}
+.search-btn:active{
+    outline: none;
+    border: none;
+    background: #ff9100;
+}
+
+/*-----------------------------------*/
+
+.film {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.film:hover .film-img {
+    border: #f60 2px solid;
+}
+.rating {
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    border-radius: 5px;
+    border: #333 1px solid;
+    background: #fff;
+}
+.rating p {
+    margin: 5px;
+    line-height: 10px;
+}
+.film-img {
+    border: #ccc 2px solid;
+    padding: 2px;
+    width: 100%;
+    /* height: 300px; */
+    object-fit: cover;
+    transition: all .3s;
+}
+.film-title {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.film-info{
+    width: 100%;
+    height: 18px;
+    margin: 2px 0 3px;
+    color: #a6a6a6;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
