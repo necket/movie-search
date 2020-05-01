@@ -20,7 +20,7 @@ class Film extends React.Component {
         this.getDetails(this.props.imdbID);
 
         return (
-            <div className="col-6 col-md-3 mt-5">
+            <div className="film-col mt-5">
                 <a className="film" href={`https://www.imdb.com/title/${this.props.imdbID}/videogallery`} target="_blank">
                     <div className="rating" id={'rating-' + this.props.imdbID}></div>
                     <img src={this.props.poster} alt={this.props.title} className="img-fluid film-img"/>

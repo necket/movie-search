@@ -93,6 +93,19 @@ a:hover {
 
 /*-----------------------------------*/
 
+.film-col {
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 50%; 
+    max-width: 50%;
+}
+@media (min-width: 768px) {
+    .film-col {
+        flex: 0 0 20%; 
+        max-width: 20%;
+    }
+}
 .film {
     width: 100%;
     box-sizing: border-box;
@@ -152,4 +165,28 @@ a:hover {
     width: 100%;
     text-align: center;
     color: #fff;
+}
+
+/*-----------------------------------------------*/
+
+.pagination {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pagination p {
+    text-align: center;
+    font-size: 18px;
+    color: #f60;
+}
+
+.pagination-btn {
+    margin: 0 5px;
+    display: none;
+}
+
+.btn-active {
+    display: inline-block;
 }

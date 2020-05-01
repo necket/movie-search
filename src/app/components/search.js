@@ -11,7 +11,12 @@ class Search extends React.Component {
 
     search(e){
         e.preventDefault();
-        this.value !== '' ? Store.getFilms(this.value) : Store.getFilms('fast')
+        Store.page = 1;
+        
+        let pagination = document.querySelector('.pagination');
+        if(pagination !== null) pagination.style.display = 'none'
+      
+        this.value !== '' ? Store.getFilms(this.value) : Store.getFilms()
     }
 
     render(){

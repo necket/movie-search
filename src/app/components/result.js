@@ -3,20 +3,24 @@ import {observer} from 'mobx-react';
 import Store from '~/store/store.js';
 import Loader from './loader.js';
 import Film from './film.js';
+import Pagination from './pagination.js';
 
-Store.getFilms('fast');
+Store.getFilms();
 
 @observer class Result extends React.Component {
     
-
     render(){
 
         let films = <Loader></Loader>;
 
         if(Store.loading === false){
+
             films = Store.current;
+
             if(films !== undefined){
+
                 document.querySelector('.search-input').blur();
+
                 films = films.map(film => 
                     <Film poster={film['Poster']} 
                           title={film['Title']} 
@@ -25,16 +29,20 @@ Store.getFilms('fast');
                           imdbID={film['imdbID']}
                           key={film['imdbID']}>
                     </Film>
-                )
+                );
+
             }else{
-                films = <p className="nothing-found">Nothing found for "{document.querySelector('.search-input').value}"</p>
+                return (
+                    <p className="nothing-found"> No results for "{document.querySelector('.search-input').value}"</p>
+                );  
             }
         }
         
         return (<>
-            <div className="row">
+            <div className="row justify-content-center">
                 {films}
             </div>
+            <Pagination></Pagination>
         </>); 
         
     }
