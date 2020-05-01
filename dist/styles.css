@@ -8,9 +8,11 @@ button{cursor: pointer;}
 
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background: #222831;
 }
 #app{
-    padding: 80px 0 50px 0;
+    padding: 40px 0;
+    background: #222831;
 }
 a:hover {
     text-decoration: none;
@@ -38,7 +40,7 @@ a:hover {
 }
 .loader {
     border: 5px solid #f3f3f3;
-    border-top: 5px solid #414141;
+    border-top: 5px solid #f60;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -52,27 +54,36 @@ a:hover {
 /*-----------------------------------*/
 
 .navbar {
-    background: #f60;
+    background: #222831;
 }
-.search{
+.logo{
+    display: block;
+    height: 40px;
+    max-width: 100%;
+}
+.search-form{
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-wrap: nowrap;
 }
 .search-input{
+    flex-grow: 1;
     outline: none;
     border: none;
-    max-width: 180px;
     font-size: 16px;
     padding: 10px 10px;
-    border-radius: 20px 0 0 20px;
 }
 .search-btn{
-    padding: 10px 15px 10px 10px;
     border: none;
-    background: #ffc400;
-    border-radius: 0 20px 20px 0;
+    background: #f60;
     color: #fff;
     transition: all .2s;
+}
+.search-btn img{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
 }
 .search-btn:active{
     outline: none;
@@ -93,6 +104,9 @@ a:hover {
 .film:hover .film-img {
     border: #f60 2px solid;
 }
+.film:hover .film-title {
+    color: #f60;
+}
 .rating {
     position: absolute;
     right: 25px;
@@ -111,13 +125,15 @@ a:hover {
     width: 100%;
     /* height: 300px; */
     object-fit: cover;
-    transition: all .3s;
+    transition: border .3s;
 }
 .film-title {
+    color: #fff;
     display: block;
     width: 100%;
     margin-top: 10px;
     font-size: 20px;
+    transition: color .3s;
 }
 .film-info{
     width: 100%;
@@ -130,4 +146,10 @@ a:hover {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.nothing-found{
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
 }

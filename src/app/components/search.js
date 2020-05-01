@@ -16,14 +16,24 @@ class Search extends React.Component {
 
     render(){
         return (
-            <nav className="navbar fixed-top">
-                <div className="container search">
-                    <form className="search-form" onSubmit={(e) => this.search(e)}>
-                        <input type="text" className="search-input" onChange={(e) => this.input(e)}/>
-                        <button type="submit" className="search-btn">Search</button>
-                    </form>
+            <header>
+                <div className="row">
+                    <div className="col-12 col-md-6">
+                        <img src="/dist/img/logo.png" alt="logo" className="logo"/>
+                    </div>
+                    <div className="col-12 col-md-6">
+                        <form className="search-form" onSubmit={(e) => this.search(e)}>
+                            <input type="text" className="search-input"
+                                    placeholder="Search for Movies..." 
+                                    onChange={(e) => this.input(e)}
+                            />
+                            <button type="submit" className="search-btn">
+                                <img src="/dist/img/search.png" alt="search"/>
+                            </button>
+                        </form>
+                    </div>
                 </div>
-            </nav>
+            </header>
         )
     }
 }

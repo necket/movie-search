@@ -27,7 +27,7 @@ Store.getFilms('fast');
                     </Film>
                 )
             }else{
-                films = <p className="text-center w-100">Nothing found for "{document.querySelector('.search-input').value}"</p>
+                films = <p className="nothing-found">Nothing found for "{document.querySelector('.search-input').value}"</p>
             }
         }
         
