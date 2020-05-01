@@ -23,10 +23,10 @@ class Search extends React.Component {
         return (
             <header>
                 <div className="row">
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-md-6 mt-3">
                         <img src="/dist/img/logo.png" alt="logo" className="logo"/>
                     </div>
-                    <div className="col-12 col-md-6">
+                    <div className="col-12 col-md-6 mt-3">
                         <form className="search-form" onSubmit={(e) => this.search(e)}>
                             <input type="text" className="search-input"
                                     placeholder="Search for Movies..." 
