@@ -136,7 +136,7 @@ a:hover {
     border: #ccc 2px solid;
     padding: 2px;
     width: 100%;
-    /* height: 300px; */
+    height: 300px;
     object-fit: cover;
     transition: border .3s;
 }
@@ -160,6 +160,33 @@ a:hover {
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+@media (max-width: 1000px) {
+    .film-img {
+        height: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .film-img {
+        height: 380px;
+    }
+}
+@media (max-width: 500px) {
+    .film-img {
+        height: 300px;
+    }
+}
+@media (max-width: 420px) {
+    .film-img {
+        height: 250px;
+    }
+}
+@media (max-width: 350px) {
+    .film-img {
+        height: 200px;
+    }
+}
+
+
 .nothing-found{
     margin-top: 50px;
     width: 100%;
